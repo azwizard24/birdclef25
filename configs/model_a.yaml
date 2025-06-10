@@ -5,7 +5,7 @@ save_path: models/model_a/
 data:
   train: data/train_a.csv
   val: data/val_a.csv
-  audio_dir: /kaggle/input/preprocess-audio
+  audio_dir: /kaggle/input/preprocess-audio/processed/
 training:
   epochs: 10
   lr: 0.0003
@@ -14,5 +14,5 @@ weights:
   - models/model_b/efficientnet_final.pth
   - models/model_c/efficientnet_final.pth
 inference:
-  input_path: /kaggle/input/audio-processed/processed/126247/126247_iNat1109254_seg0.wav
+  input_path: /kaggle/input/preprocess-audio/processed/126247/126247_iNat1109254_seg0.wav
 save_best_only: true

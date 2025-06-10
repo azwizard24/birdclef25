@@ -1,0 +1,17 @@
+model: convnext_bird
+sigmoid_applied: false
+save_path: models/model_c/
+data:
+  train: data/processed/train_c.csv
+  val: data/processed/val_c.csv
+  audio_dir: /kaggle/input/preprocess-audio
+training:
+  epochs: 5
+  lr: 0.0003
+weights:
+  - models/model_a/efficientnet_final.pth
+  - models/model_b/efficientnet_final.pth
+  - models/model_c/efficientnet_final.pth
+inference:
+  input_path: /kaggle/input/audio-processed/processed/126247/126247_iNat1109254_seg0.wav
+save_best_only: true
